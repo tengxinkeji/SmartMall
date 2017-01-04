@@ -1,0 +1,54 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/bg_device_item"
+    >
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="时间设定"
+        android:gravity="center_vertical"
+        android:drawableLeft="@drawable/time_btn"
+        android:textColor="@color/txtColor_bar"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="#3a4d5c"
+        android:layout_marginLeft="40dp"/>
+    <include
+        android:id="@+id/timer_1"
+        layout="@layout/layout_item_timer"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="#3a4d5c"
+        android:layout_marginLeft="40dp"/>
+    <include
+        android:id="@+id/timer_2"
+        layout="@layout/layout_item_timer"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="#3a4d5c"
+        android:layout_marginLeft="40dp"/>
+    <include
+        android:id="@+id/timer_3"
+        layout="@layout/layout_item_timer"/>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="#3a4d5c"
+        android:layout_marginLeft="40dp"/>
+    <include
+        android:id="@+id/timer_4"
+        layout="@layout/layout_item_timer"/>
+    <!--<include
+        android:id="@+id/timer_2"
+        layout="@layout/layout_subsidiary_timesetting"/>-->
+
+
+</LinearLayout>

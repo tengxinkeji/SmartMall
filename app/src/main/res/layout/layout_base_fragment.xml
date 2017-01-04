@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout  xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/bgColor">
+
+    <com.pulltorefresh.library.PullToRefreshScrollView
+        xmlns:ptr="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/pull_refresh_scrollview"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_alignParentBottom="true"
+        ptr:ptrScrollingWhileRefreshingEnabled="true"
+        ptr:ptrAnimationStyle="flip"
+        ptr:ptrMode="pullFromStart"
+        >
+        <LinearLayout
+            android:id="@+id/layout_base_f"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            >
+
+        </LinearLayout>
+    </com.pulltorefresh.library.PullToRefreshScrollView>
+
+    <FrameLayout
+        android:id="@+id/layout_parent_head"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignParentTop="true"
+        ></FrameLayout>
+
+    <FrameLayout
+        android:id="@+id/layout_parent_bottom"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@android:color/transparent"
+        android:layout_alignParentBottom="true"></FrameLayout>
+</RelativeLayout>
+
+

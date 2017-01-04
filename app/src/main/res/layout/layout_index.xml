@@ -1,0 +1,209 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+    <RelativeLayout
+        android:id="@+id/ad_layout"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:visibility="visible">
+        <com.common.banner.view.AbSlidingPlayView
+            xmlns:ab="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:background="#00000000"
+            android:layout_marginBottom="10dp"
+            android:id="@+id/main_menu_0_ad"
+            ab:point_position="center"/>
+
+
+    </RelativeLayout>
+    
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <LinearLayout
+            android:id="@+id/index_goods"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/index_03"
+                android:layout_marginTop="@dimen/pading"
+                android:layout_marginBottom="@dimen/pading_msmall"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goods"
+                android:layout_marginTop="@dimen/pading_msmall"
+                android:layout_marginBottom="@dimen/pading"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_sales"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/index_05"
+                android:layout_marginTop="@dimen/pading"
+                android:layout_marginBottom="@dimen/pading_msmall"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/goods_sales"
+                android:layout_marginTop="@dimen/pading_msmall"
+                android:layout_marginBottom="@dimen/pading"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_repair"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/index_07"
+                android:layout_marginTop="@dimen/pading"
+                android:layout_marginBottom="@dimen/pading_msmall"
+                android:id="@+id/imageView5" />
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/repair"
+                android:layout_marginTop="@dimen/pading_msmall"
+                android:layout_marginBottom="@dimen/pading"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/index_dev"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:gravity="center">
+            <ImageView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:src="@drawable/index_09"
+                android:layout_marginTop="@dimen/pading"
+                android:layout_marginBottom="@dimen/pading_msmall"/>
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/dev"
+                android:layout_marginTop="@dimen/pading_msmall"
+                android:layout_marginBottom="@dimen/pading"/>
+        </LinearLayout>
+
+    </LinearLayout>
+
+   <LinearLayout
+       android:layout_width="match_parent"
+       android:layout_height="wrap_content"
+       android:orientation="vertical"
+       android:background="@color/white"
+       android:layout_marginTop="@dimen/pading">
+       <LinearLayout
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:orientation="horizontal"
+           android:gravity="center">
+           <View
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_marginLeft="72dp"
+               android:layout_height="@dimen/divider"
+               android:background="@color/divider"/>
+           <ImageView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:src="@drawable/index_16"
+               android:layout_margin="@dimen/pading_msmall"/>
+           <TextView
+               android:layout_width="wrap_content"
+               android:layout_height="wrap_content"
+               android:text="@string/hot_activity"
+               android:padding="@dimen/pading"/>
+           <View
+               android:layout_width="0dp"
+               android:layout_weight="1"
+               android:layout_marginRight="72dp"
+               android:layout_height="@dimen/divider"
+               android:background="@color/divider"/>
+       </LinearLayout>
+
+       <com.common.myui.MyGridView
+           android:id="@+id/grid_index_rec"
+           android:layout_width="match_parent"
+           android:layout_height="wrap_content"
+           android:verticalSpacing="@dimen/spacing"
+           android:horizontalSpacing="@dimen/spacing"
+           android:numColumns="1"
+           android:divider="@color/divider"
+           android:dividerHeight="@dimen/divider"
+           android:listSelector="@android:color/transparent"
+           android:cacheColorHint="@android:color/transparent"
+           />
+
+
+   </LinearLayout>
+
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pading">
+        <ImageView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/icon_flag_red"/>
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/categroy_hot"
+            android:padding="10dp"
+            android:gravity="center_vertical"
+            android:id="@+id/textView2" />
+    </LinearLayout>
+
+
+    <com.common.myui.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1"
+        android:verticalSpacing="@dimen/spacing"
+        android:horizontalSpacing="@dimen/spacing"
+        android:background="@color/white"
+        android:numColumns="2"
+        android:divider="@color/divider"
+        android:dividerHeight="@dimen/divider"
+        android:listSelector="@android:color/transparent"
+        android:cacheColorHint="@android:color/transparent"
+        />
+
+
+</LinearLayout>

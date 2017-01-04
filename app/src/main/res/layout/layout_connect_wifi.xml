@@ -1,0 +1,53 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:input="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+   >
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="10dp"/>
+
+    <cn.lanmei.com.smartmall.myui.MyInputEdit
+        android:id="@+id/input_wifi"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        input:txttag="SSID:"
+        input:input_hint="wifi名">
+
+    </cn.lanmei.com.smartmall.myui.MyInputEdit>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+    <cn.lanmei.com.smartmall.myui.MyInputEdit
+        android:id="@+id/input_wifi_psw"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        input:txttag="密码:"
+        input:input_hint="请输入密码"
+        input:input_type="txt"
+        >
+
+    </cn.lanmei.com.smartmall.myui.MyInputEdit>
+
+
+
+    <TextView
+        android:id="@+id/refer"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:padding="10dp"
+        android:gravity="center"
+        android:layout_marginTop="40dp"
+        android:layout_marginRight="40dp"
+        android:layout_marginLeft="40dp"
+        android:text="@string/ok"
+        android:enabled="false"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/white"/>
+
+</LinearLayout>

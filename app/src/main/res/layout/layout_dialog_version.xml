@@ -1,0 +1,92 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:layout_margin="30dp"
+    android:minWidth="180dp"
+    android:background="@drawable/bg_corners"
+    android:padding="10dp">
+    <TextView
+        android:id="@+id/setting_version_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/txtColor_txt"
+        android:drawableLeft="@mipmap/wifi_yes"
+        android:gravity="center"
+        android:textSize="@dimen/txt_large"
+        android:text="@string/title"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+
+    <TextView
+        android:id="@+id/setting_version_info"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/divider"
+        android:textSize="@dimen/txt_normal"
+        android:padding="10dp"
+        android:text="@string/title"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <ProgressBar
+            android:id="@+id/down_progress"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="2dp"
+            android:max="100"
+            android:progress="1"
+            android:layout_marginLeft="10dp"
+            android:layout_marginRight="10dp"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:progressDrawable="@drawable/bg_progressbar" />
+        <TextView
+            android:id="@+id/percentage"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="0%"/>
+    </LinearLayout>
+
+
+    <TextView
+        android:id="@+id/setting_version_ignore"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/divider"
+        android:textSize="@dimen/txt_normal"
+        android:drawableLeft="@mipmap/check_no"
+        android:padding="10dp"
+        android:gravity="center"
+        android:text="@string/update_version_ignore"/>
+
+    <TextView
+        android:id="@+id/version_dialog_ok"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@drawable/btn"
+        android:textSize="@dimen/txt_normal"
+        android:text="@string/dialog_update_ok"
+        android:textColor="@android:color/white"
+        android:layout_margin="5dp"
+        android:gravity="center"
+        android:padding="10dp"/>
+    <TextView
+        android:id="@+id/version_dialog_cancle"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textSize="@dimen/txt_normal"
+        android:text="@string/dialog_update_cancle"
+        android:textColor="@android:color/white"
+        android:background="@drawable/btn"
+        android:gravity="center"
+        android:layout_margin="5dp"
+        android:padding="10dp"/>
+
+
+</LinearLayout>

@@ -1,0 +1,124 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+
+
+
+    <ImageView
+        android:id="@+id/device_on_off"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:tag="false"
+        android:src="@mipmap/icon_device_stop"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="10dp"/>
+
+    <TextView
+        android:text="万绿阳光智能热水器"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minWidth="100dp"
+        android:layout_marginTop="15dp"
+        android:layout_centerHorizontal="true"
+        android:textColor="@color/white"
+        android:textSize="18dp"
+        android:visibility="gone"
+        android:id="@+id/device_name" />
+
+    <ImageView
+        android:src="@drawable/xh_on"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBottom="@+id/device_on_off"
+        android:layout_alignParentRight="true"
+        android:layout_marginRight="10dp"
+        android:textColor="@color/txtColor_bar"
+        android:id="@+id/device_state" />
+
+    <LinearLayout
+        android:layout_below="@+id/device_on_off"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentStart="true">
+
+
+
+        <cn.lanmei.com.smartmall.myui.circleprogress.SeekCircle
+            android:id="@+id/seekCircle"
+            android:layout_width="250dp"
+            android:layout_height="250dp"
+            android:layout_gravity="center_horizontal"
+            />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="-15dp">
+            <TextView
+                android:id="@+id/device_current_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                />
+            <View
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"/>
+
+            <TextView
+                android:id="@+id/device_setting_t"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:gravity="center"
+                android:padding="10dp"
+                android:textColor="@color/white"
+                />
+        </LinearLayout>
+
+       <include layout="@layout/layout_device_setting_timer"/>
+    </LinearLayout>
+
+    <RelativeLayout
+        android:id="@+id/layout_err"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:visibility="gone"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/txt_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textColor="#f6543d"
+            android:text="当前设备出现故障"/>
+
+
+        <ImageView
+
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:src="@mipmap/icon_go"/>
+
+        <ImageView
+            android:id="@+id/img_err"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@mipmap/icon_err"
+            android:layout_centerVertical="true"
+            android:layout_toLeftOf="@+id/txt_err"/>
+    </RelativeLayout>
+
+
+</RelativeLayout>

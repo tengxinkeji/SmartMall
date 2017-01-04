@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:minWidth="@dimen/img_width"
+    android:gravity="center_horizontal"
+    android:background="@drawable/bg_rectangel_w">
+
+
+    <cn.lanmei.com.smartmall.myui.ImageGoodsView
+        android:id="@+id/goods_img"
+        android:layout_width="@dimen/img_height"
+        android:layout_height="@dimen/img_height"
+        android:scaleType="fitXY"
+        android:layout_margin="10dp"
+        android:src="@drawable/img_logo"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="5dp">
+        <TextView
+            android:id="@+id/goods_name"
+            android:textColor="@color/black"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            android:text="@string/app_name"
+            android:maxLines="2"/>
+        <TextView
+            android:id="@+id/goods_price"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text=""
+            android:maxLines="1"
+            android:textColor="@color/txtColor_txt"
+            />
+        <TextView
+            android:id="@+id/goods_sale_num"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/goods_reviewnum"
+            android:lines="1"
+            android:textColor="@color/txtColor_txt"
+            />
+    </LinearLayout>
+
+</LinearLayout>

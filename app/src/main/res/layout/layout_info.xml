@@ -1,0 +1,131 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/white"
+        android:text="个人信息"
+        android:padding="10dp"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+        <cn.lanmei.com.smartmall.myui.MyInputEdit
+            xmlns:wh="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/txt_info_name"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            wh:txttag="姓名："
+            wh:input_hint=""
+            wh:input_gravity="right"
+            wh:input_type="txt"></cn.lanmei.com.smartmall.myui.MyInputEdit>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_marginLeft="25dp"
+            android:background="@color/divider"/>
+
+        <cn.lanmei.com.smartmall.myui.MyInputEdit
+            xmlns:wh="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/txt_info_sex"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="25dp"
+            android:layout_marginRight="25dp"
+            wh:txttag="性别："
+            wh:input_hint=""
+            wh:input_gravity="right"
+            wh:input_editable="false"
+            wh:input_type="num"></cn.lanmei.com.smartmall.myui.MyInputEdit>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="10dp"/>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:gravity="center_vertical">
+            <cn.lanmei.com.smartmall.myui.MyInputEdit
+                xmlns:wh="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/txt_info_call"
+                android:layout_width="wrap_content"
+                android:layout_weight="1"
+                android:layout_height="wrap_content"
+                android:layout_marginLeft="25dp"
+                wh:txttag="电话："
+                wh:input_hint=""
+                wh:input_gravity="right"
+                wh:input_editable="false"
+                wh:input_type="num">
+
+            </cn.lanmei.com.smartmall.myui.MyInputEdit>
+            <TextView
+                android:id="@+id/txt_bind"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="绑定手机"
+                android:layout_marginLeft="10dp"
+                android:layout_marginRight="10dp"/>
+        </LinearLayout>
+    </LinearLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:background="@color/white">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="详细地址"
+            android:padding="10dp"/>
+        <EditText
+            android:id="@+id/txt_info_location"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:hint="广东广州"
+            android:padding="5dp"/>
+       <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/icon_location"
+                android:padding="10dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/txt_addr_manage"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="地址管理"
+        android:drawableRight="@drawable/icon_right_gray"
+        android:layout_marginTop="10dp"
+        android:padding="10dp"
+        android:gravity="center_vertical"
+        android:background="@color/white"/>
+
+
+</LinearLayout>

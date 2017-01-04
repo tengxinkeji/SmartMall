@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="130dp"
+    >
+
+    <ImageView
+        android:id="@+id/img_goods"
+        android:layout_width="100dp"
+        android:layout_height="100dp"
+        android:layout_marginLeft="10dp"
+        android:scaleType="center"
+        android:src="@drawable/img_logo"
+        android:layout_toRightOf="@+id/box_goods"
+        android:layout_centerVertical="true"/>
+
+
+    <TextView
+        android:id="@+id/txt_goodsname"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:textColor="@color/txtColor_txt"
+        android:lines="1"
+        android:layout_toRightOf="@+id/img_goods"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="10dp"/>
+
+    <TextView
+        android:id="@+id/txt_goodsprice"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="1200"
+        android:textColor="@color/txtColor_bar"
+        android:layout_below="@+id/txt_goodsname"
+        android:layout_alignLeft="@+id/txt_goodsname"
+        android:layout_marginRight="10dp"/>
+    <TextView
+        android:id="@+id/txt_goods_num"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text="1件"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/txtColor_txt"
+        android:layout_toRightOf="@+id/txt_goodsprice"
+        android:layout_alignBaseline="@+id/txt_goodsprice"
+        android:layout_marginTop="5dp"/>
+
+    <TextView
+        android:id="@+id/txt_params_tag"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="参数："
+        android:textColor="@color/txtColor_txt"
+        android:layout_below="@+id/txt_goodsprice"
+        android:layout_marginTop="5dp"
+        android:layout_alignLeft="@+id/txt_goodsname"
+        />
+
+    <TextView
+        android:id="@+id/txt_params"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="xxl"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/txtColor_txt"
+        android:layout_toRightOf="@+id/txt_params_tag"
+        android:layout_alignBaseline="@+id/txt_params_tag"
+        android:layout_marginTop="5dp"/>
+
+</RelativeLayout>

@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical"
+    android:layout_width="100dp"
+    android:layout_height="100dp"
+    android:gravity="center"
+    android:background="@drawable/bg_rectange_t">
+    <ImageView
+        android:id="@+id/goods_img"
+        android:layout_width="99dp"
+        android:layout_height="99dp"
+        android:scaleType="centerCrop"
+        android:layout_margin="1dp"
+        android:src="@drawable/img_logo"/>
+    <TextView
+        android:id="@+id/goods_price"
+        android:layout_width="wrap_content"
+        android:layout_height="20dp"
+        android:gravity="center"
+        android:text="@string/app_name"
+        android:lines="1"
+        android:textSize="@dimen/txt_small"
+        android:background="@color/txtColor_bar"
+        android:layout_gravity="right"
+        android:textColor="@color/black"
+        android:paddingLeft="10dp"
+        android:paddingRight="10dp"
+        android:layout_marginTop="-25dp"
+        android:layout_marginRight="2dp"/>
+
+
+
+
+
+
+
+</LinearLayout>

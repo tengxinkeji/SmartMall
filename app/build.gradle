@@ -1,0 +1,88 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 23
+    buildToolsVersion "24.0.0"
+
+    defaultConfig {
+        applicationId "cn.lanmei.com.smartmall"
+        minSdkVersion 14
+        targetSdkVersion 23
+        versionCode 2
+        versionName "2.1.2"
+        multiDexEnabled true
+
+    }
+    dexOptions {
+        javaMaxHeapSize "4g"
+    }
+    aaptOptions.cruncherEnabled = false
+    aaptOptions.useNewCruncher = false
+
+    signingConfigs {
+        /*debug {
+            storeFile file("wklanmei.jks")
+            keyAlias "东风商家"
+            storePassword "wklanmei"
+            keyPassword "dongfeng"
+            //keytool -v -list -keystore app/wklanmei.jks
+        }*/
+
+        debug {
+            storeFile file("wk_lanmei_smartmall.jks")
+            keyAlias "智能商城"
+            storePassword "wklanmei"
+            keyPassword "wksmartmall"
+            //keytool -v -list -keystore app/wk_lanmei_smartmall.jks
+        }
+
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+
+        debug {
+            signingConfig signingConfigs.debug
+        }
+    }
+
+    sourceSets {
+        main {
+            jniLibs.srcDirs = ['libs']
+            jni.srcDirs = ['jni']
+        }
+    }
+
+    lintOptions {
+        checkReleaseBuilds false
+        abortOnError false
+    }
+}
+
+dependencies {
+    compile fileTree(include: ['*.jar'], dir: 'libs')
+    compile project(':Autobahn')
+    compile files('libs/jpush-android-2.1.9.jar')
+    compile project(':oss-android-sdk')
+    compile project(':mydownloader')
+    compile files('libs/bolts-tasks-1.4.0.jar')
+    compile files('libs/parse-android-1.13.0.jar')
+    compile files('libs/umeng-analytics-v5.2.4.jar')
+    compile files('libs/umeng-update-v2.6.0.1.jar')
+    compile project(':redpacketlibrary')
+    compile project(':easeui')
+    compile files('libs/MobCommons-2016.1102.1128.jar')
+    compile files('libs/MobTools-2016.1102.1128.jar')
+    compile files('libs/ShareSDK-Core-2.7.9.jar')
+    compile files('libs/ShareSDK-QQ-2.7.9.jar')
+    compile files('libs/ShareSDK-QZone-2.7.9.jar')
+    compile files('libs/ShareSDK-Wechat-2.7.9.jar')
+    compile files('libs/ShareSDK-Wechat-Core-2.7.9.jar')
+    compile files('libs/ShareSDK-Wechat-Favorite-2.7.9.jar')
+    compile files('libs/ShareSDK-Wechat-Moments-2.7.9.jar')
+    compile 'com.android.support:support-v4:23.4.0'
+    compile 'com.google.android.gms:play-services:9.6.1'
+    testCompile 'junit:junit:4.12'
+}

@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <include layout="@layout/layout_goods_bar"/>
+    <View
+        android:id="@+id/view_goods"
+        android:layout_width="70dp"
+        android:layout_height="2dp"
+        android:visibility="gone"
+        android:background="@color/txtColor_bar"/>
+    <cn.lanmei.com.smartmall.myui.DragLayout
+        android:id="@+id/draglayout"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_weight="1" >
+
+        <FrameLayout
+            android:id="@+id/first"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+
+        <FrameLayout
+            android:id="@+id/second"
+            android:layout_width="fill_parent"
+            android:layout_height="fill_parent" />
+    </cn.lanmei.com.smartmall.myui.DragLayout>
+    <View
+        android:layout_height="@dimen/divider"
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:background="@color/divider"/>
+    <FrameLayout
+        android:id="@+id/layout_menu_goods"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+    </FrameLayout>
+
+
+</LinearLayout>

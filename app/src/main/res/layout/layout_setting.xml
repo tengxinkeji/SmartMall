@@ -1,0 +1,78 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical" >
+    <TextView
+        android:id="@+id/txt_help"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="帮助信息"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/icon_right_gray"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+    <LinearLayout
+        android:id="@+id/my_setting_version"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        >
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="版本检查"
+            android:textSize="@dimen/txt_normal"
+            android:textColor="@color/txtColor_txt"
+            android:layout_margin="10dp"/>
+        <TextView
+            android:id="@+id/my_setting_currentV"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="right|center"
+            android:text="v"
+            android:drawableRight="@drawable/icon_right_gray"
+            android:textSize="@dimen/txt_normal"
+            android:textColor="@color/txtColor_txt"
+            android:layout_margin="10dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+    <TextView
+        android:id="@+id/txt_idea"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:padding="10dp"
+        android:text="意见反馈"
+        android:gravity="center_vertical"
+        android:drawableRight="@drawable/icon_right_gray"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"
+       />
+
+    <TextView
+        android:id="@+id/quit"
+        android:layout_width="match_parent"
+        android:layout_height="37dp"
+        android:text="@string/quit"
+        android:textColor="@color/white"
+        android:textSize="@dimen/txt_normal"
+        android:gravity="center"
+        android:background="@color/txtColor_bar"
+        android:layout_marginTop="30dp"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>
+

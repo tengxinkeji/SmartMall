@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<selector xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <!-- 普通无焦点状态 -拖动按钮-->
+    <item
+        android:state_focused="false"
+        android:state_pressed="false" >
+
+            <shape android:shape="oval">
+                <stroke android:color="@color/divider"
+                    android:width="@dimen/divider"/>
+                <size android:height="16dp"
+                    android:width="16dp"/>
+                <gradient
+                    android:startColor="@color/txtColor_bar"
+                    android:endColor="@color/txtColor_bar"
+                    android:centerColor="@color/white"
+                    android:centerX="0.5"
+                    android:centerY="0.5"
+                    android:gradientRadius="10"
+                    android:type="radial"
+                    />
+            </shape>
+
+
+    </item>
+    <!-- 有焦点 -->
+    <item
+        android:state_focused="true">
+        <shape android:shape="oval">
+            <solid android:color="@color/txtColor_bar"></solid>
+            <size android:height="16dp"
+                android:width="16dp"/>
+        </shape>
+    </item>
+</selector>

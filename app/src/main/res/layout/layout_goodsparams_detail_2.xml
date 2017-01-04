@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<cn.lanmei.com.smartmall.myui.CustScrollView_2 xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <cn.lanmei.com.smartmall.myui.htmltext.HtmlTextView
+            android:id="@+id/txt_info"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:text=""
+            android:textColor="@color/txtColor_txt"
+            android:padding="10dp"/>
+
+
+    </LinearLayout>
+
+
+</cn.lanmei.com.smartmall.myui.CustScrollView_2>

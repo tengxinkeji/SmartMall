@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+    <RelativeLayout
+        xmlns:android="http://schemas.android.com/apk/res/android"
+
+        android:id="@+id/app_bar"
+        android:background="@color/white"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/barHeight">
+        <TextView
+            android:id="@+id/bar_left"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_centerVertical="true"
+            android:layout_alignParentLeft="true"
+            android:drawableLeft="@mipmap/back"
+            android:layout_marginLeft="5dp"
+            />
+        <TextView
+            android:id="@+id/bar_center"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:gravity="center"
+            android:textSize="@dimen/txt_large"
+            android:lines="1"
+            android:layout_centerHorizontal="true"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:minWidth="40dp"
+            android:textColor="@color/txtColor_bar"
+            android:text="@string/app_name"/>
+
+        <TextView
+            android:id="@+id/bar_right"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:layout_alignParentTop="true"
+            android:layout_alignParentRight="true"
+            android:gravity="center_vertical"
+            android:textColor="@color/txtColor_bar"
+            android:textSize="@dimen/txt_normal"
+            android:text=""
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"/>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"
+        android:layout_alignParentBottom="true"/>
+    </RelativeLayout>
+

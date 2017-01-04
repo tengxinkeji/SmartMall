@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white">
+    <TextView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:paddingLeft="10dp"
+        android:paddingTop="3dp"
+        android:paddingBottom="3dp"
+        android:text="照片上传"
+        android:drawableLeft="@drawable/icon_img_upload"
+        android:gravity="center_vertical"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+    <com.common.myui.MyGridView
+        android:id="@+id/grid_img_upload"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:columnWidth="70dp"
+        android:numColumns="auto_fit"
+        android:listSelector="@color/transparent"
+        android:cacheColorHint="@color/transparent"
+        android:horizontalSpacing="2dp"
+        android:verticalSpacing="2dp"></com.common.myui.MyGridView>
+</LinearLayout>

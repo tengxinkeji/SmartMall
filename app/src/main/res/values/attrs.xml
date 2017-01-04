@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MyInputEdit">
+        <attr name="txttag" format="string" ></attr>
+        <attr name="input_editable" format="boolean" ></attr>
+        <attr name="input_hint" format="string" ></attr>
+        <attr name="input_type">
+            <enum name="txt" value="1"></enum>
+            <enum name="num" value="2"></enum>
+            <enum name="email" value="3"></enum>
+            <enum name="psw" value="4"></enum>
+            <enum name="mphone" value="5"></enum>
+        </attr>
+        <attr name="input_gravity">
+            <enum name="left" value="1"></enum>
+            <enum name="right" value="2"></enum>
+        </attr>
+        <attr name="input_txt" format="string" ></attr>
+        <attr name="txtsrc" format="reference"></attr>
+        <attr name="txt_tag_color" format="color"></attr>
+        <attr name="txt_tag_size" format="dimension"></attr>
+    </declare-styleable>
+
+    <declare-styleable name="SeekCircle">
+        <attr name="max" format="integer" value="15" />
+        <attr name="progress" format="integer" value="0" />
+    </declare-styleable>
+
+    <!-- Defines the custom XML attributes supported for a HorizontalListView -->
+    <declare-styleable name="HorizontalListView">
+        <attr name="dividerWidth" format="dimension" />
+        <attr name="android:divider" />
+        <attr name="android:requiresFadingEdge" />
+        <attr name="android:fadingEdgeLength" />
+    </declare-styleable>
+</resources>

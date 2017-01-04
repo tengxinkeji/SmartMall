@@ -1,0 +1,51 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:background="@mipmap/bg_device">
+    <TextView
+        android:id="@+id/scan_state"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:layout_gravity="center_horizontal"
+        android:text="设备扫描中..."/>
+
+
+    <cn.lanmei.com.smartmall.myui.circleprogress.RadarView
+        android:id="@+id/radar"
+        android:layout_width="200dp"
+        android:layout_height="200dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_margin="20dp"/>
+
+    <TextView
+        android:id="@+id/scan_fail_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:textColor="@color/white"
+        android:layout_marginTop="20dp"
+        android:visibility="gone"
+        android:text="如出现搜索失败，请检查：
+        \n\t\t1.测量设备是否在1米之内；
+        \n\t\t2.检查设备是否绑定；
+        \n\t\t3.检查设备是否开启。"/>
+
+    <TextView
+        android:id="@+id/scan"
+        android:layout_width="85dp"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:gravity="center"
+        android:text="知道了"
+        android:visibility="gone"
+        android:background="@drawable/btn"
+        android:textColor="@color/white"
+        android:layout_margin="10dp"
+        android:padding="10dp"/>
+
+
+
+</LinearLayout>

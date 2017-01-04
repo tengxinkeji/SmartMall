@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:wk="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:gravity="center_vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="horizontal">
+    <CheckBox
+        android:id="@+id/device_check"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:button="@null"
+        android:layout_margin="10dp"
+        android:background="@drawable/radio"
+        />
+    <com.common.myui.RoundImageView
+        android:id="@+id/img_pic"
+        android:layout_width="40dp"
+        android:layout_height="40dp"
+        android:src="@drawable/img_logo"
+        wk:type="circle"
+        />
+    <TextView
+        android:id="@+id/txt_username"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_weight="1"
+        android:text=""
+        android:layout_marginLeft="10dp"
+        android:textColor="@color/txtColor_txt"/>
+    <TextView
+        android:id="@+id/txt_addtime"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:layout_marginRight="10dp"
+        android:textColor="@color/txtColor_hint"/>
+
+
+</LinearLayout>

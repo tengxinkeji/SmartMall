@@ -1,0 +1,292 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal">
+            <TextView
+                android:id="@+id/txt_orderno"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:textColor="@color/txtColor_txt"
+                android:padding="@dimen/pading"
+                android:text="@string/order_no"/>
+            <TextView
+                android:id="@+id/txt_order_stauts"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/pading"
+                android:textColor="@android:color/holo_red_light"
+                android:text="@string/order_status_1"/>
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"/>
+        <TextView
+            android:id="@+id/txt_order_stauts_detail"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:gravity="center_vertical"
+            android:textColor="@color/txtColor_bar"
+            android:drawableLeft="@drawable/em_icon_account"
+            android:drawableRight="@drawable/icon_right_gray"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pading">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/info"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading"/>
+
+        <TextView
+            android:id="@+id/txt_name_sex"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="name"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading_2"/>
+        <TextView
+            android:id="@+id/txt_phone"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="phone"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading_2"/>
+        <TextView
+            android:id="@+id/txt_addr"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="addr"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pading">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/info_goods"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading"/>
+
+        <TextView
+            android:id="@+id/txt_goods"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="@string/goods_desc"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading_2"/>
+        <TextView
+            android:id="@+id/txt_goods_type"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="@string/goods_type"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading_2"/>
+        <TextView
+            android:id="@+id/txt_goods_errdesc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:layout_marginLeft="@dimen/pading"
+            android:text="@string/goods_err_desc"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+
+        android:layout_marginTop="@dimen/pading">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/goods_img_upload"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading"/>
+        <com.common.myui.MyGridView
+            android:id="@+id/grid_img_upload"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:columnWidth="70dp"
+            android:layout_margin="@dimen/pading"
+            android:numColumns="auto_fit"
+            android:listSelector="@color/transparent"
+            android:cacheColorHint="@color/transparent"
+            android:horizontalSpacing="2dp"
+            android:verticalSpacing="2dp"></com.common.myui.MyGridView>
+
+
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pading">
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/server_time"/>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:background="@color/divider"
+            android:layout_marginLeft="@dimen/pading"/>
+        <TextView
+            android:id="@+id/repair_server_time"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/server_time"/>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:background="@color/white"
+        android:layout_marginTop="@dimen/pading">
+        <TextView
+            android:id="@+id/txt_parts"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/goods_part_replace"/>
+
+        <TextView
+            android:id="@+id/order_repair_money"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="@dimen/pading"
+            android:text="@string/door_service_money"/>
+
+
+    </LinearLayout>
+
+    <TextView
+        android:id="@+id/order_repair_door_time"
+        android:layout_width="match_parent"
+        android:layout_marginTop="@dimen/pading"
+        android:layout_height="wrap_content"
+        android:padding="@dimen/pading"
+        android:background="@color/white"
+        android:text="@string/door_service_time"/>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="right"
+        android:background="@color/white"
+        android:padding="@dimen/pading">
+        <TextView
+            android:id="@+id/txt_contact"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/contact_merchant"
+            android:layout_margin="@dimen/pading"
+            android:textColor="@color/btn_text_color"
+            android:background="@drawable/btn_txt"
+            android:paddingTop="@dimen/pading"
+            android:paddingBottom="@dimen/pading"
+            android:paddingLeft="@dimen/pading_2"
+            android:paddingRight="@dimen/pading_2"/>
+
+        <TextView
+            android:id="@+id/txt_merchant_toast"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/merchant_toast"
+            android:layout_margin="@dimen/pading"
+            android:textColor="@color/btn_text_color"
+            android:background="@drawable/btn_txt"
+            android:paddingTop="@dimen/pading"
+            android:paddingBottom="@dimen/pading"
+            android:paddingLeft="@dimen/pading_2"
+            android:paddingRight="@dimen/pading_2"/>
+
+        <TextView
+            android:id="@+id/txt_ok_door"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/repair_ok_door"
+            android:layout_margin="@dimen/pading"
+            android:textColor="@color/btn_text_color"
+            android:background="@drawable/btn_txt"
+            android:paddingTop="@dimen/pading"
+            android:paddingBottom="@dimen/pading"
+            android:paddingLeft="@dimen/pading_2"
+            android:paddingRight="@dimen/pading_2"/>
+
+    </LinearLayout>
+
+</LinearLayout>

@@ -1,0 +1,67 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/layout_topic"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:descendantFocusability="blocksDescendants"
+    android:background="@color/white">
+    <include layout="@layout/item_topic_head"/>
+    <com.common.myui.MyGridView
+        android:id="@+id/gridview"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+        android:horizontalSpacing="@dimen/spacing"
+        android:verticalSpacing="@dimen/spacing"
+        android:numColumns="3"
+        android:listSelector="@color/transparent"
+        android:cacheColorHint="@color/transparent">
+
+    </com.common.myui.MyGridView>
+<View
+    android:layout_width="match_parent"
+    android:layout_height="@dimen/divider"
+    android:background="@color/divider"/>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <TextView
+            android:id="@+id/txt_1"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor_hint"
+            android:textSize="@dimen/txt_normal"
+            android:gravity="center_vertical"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:drawableLeft="@drawable/icon_topic_type"/>
+        <TextView
+            android:id="@+id/txt_2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:textColor="@color/txtColor_hint"
+            android:textSize="@dimen/txt_normal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/qz_19"/>
+
+        <TextView
+            android:id="@+id/txt_3"
+            android:layout_width="wrap_content"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:textColor="@color/txtColor_hint"
+            android:textSize="@dimen/txt_normal"
+            android:paddingTop="10dp"
+            android:paddingBottom="10dp"
+            android:gravity="center_vertical"
+            android:drawableLeft="@drawable/qz_21"/>
+
+    </LinearLayout>
+
+</LinearLayout>

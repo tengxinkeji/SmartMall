@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <include layout="@layout/layout_item_topic"/>
+    <TextView
+        android:id="@+id/txt_topic_num"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="@string/topic_review_num"
+        android:padding="10dp"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+    <com.common.myui.MyListView
+        android:id="@+id/list_review"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="10dp"
+
+        android:listSelector="@color/transparent"
+        android:cacheColorHint="@color/transparent"></com.common.myui.MyListView>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal">
+        <EditText
+            android:id="@+id/e_topic"
+            android:layout_width="0dp"
+            android:layout_weight="1"
+            android:layout_height="wrap_content"
+            android:lines="1"
+            android:padding="10dp"
+            android:background="@drawable/corners_input"/>
+        <TextView
+            android:id="@+id/txt_topic_send"
+            android:layout_width="70dp"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:background="@drawable/btn"
+            android:text="@string/button_send"/>
+    </LinearLayout>
+
+
+</LinearLayout>

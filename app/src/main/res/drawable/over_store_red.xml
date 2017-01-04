@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="utf-8"?>
+<shape
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:shape="oval">
+    <stroke android:color="@android:color/holo_red_light"
+        android:width="@dimen/divider"/>
+    <solid android:color="@color/transparent"/>
+    <size android:width="24dp"
+        android:height="24dp"/>
+    <padding android:bottom="@dimen/pading_msmall"
+        android:left="@dimen/pading_msmall"
+        android:top="@dimen/pading_msmall"
+        android:right="@dimen/pading_msmall"/>
+
+</shape>

@@ -1,0 +1,37 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <TextView
+        android:id="@+id/txt_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text=""
+        android:padding="10dp"
+        android:textSize="@dimen/txt_large"
+        android:textColor="@color/bg_device_item"/>
+    <TextView
+        android:id="@+id/txt_time"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:lines="1"
+        android:text=""
+        android:paddingLeft="10dp"
+        android:textSize="@dimen/txt_normal"
+        android:textColor="@color/txtColor_hint"/>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"
+        android:layout_marginBottom="10dp"
+        android:layout_marginTop="5dp"/>
+    <cn.lanmei.com.smartmall.myui.htmltext.HtmlTextView
+        android:id="@+id/txt_info"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text=""
+        android:padding="10dp"/>
+
+</LinearLayout>

@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:descendantFocusability="blocksDescendants"
+    android:orientation="vertical">
+    <View
+        android:id="@+id/divider_top"
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:visibility="gone"
+        android:background="@color/divider"/>
+    <RelativeLayout
+        android:id="@+id/content"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+        <ImageView
+            android:id="@+id/logo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerVertical="true"
+            android:layout_margin="10dp"
+            android:layout_alignParentLeft="true"
+            android:layout_alignParentTop="true"
+            android:src="@mipmap/my_10"/>
+        <TextView
+            android:id="@+id/title"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="sssss"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_toLeftOf="@+id/show"
+            android:layout_centerVertical="true"
+            android:textColor="@color/txtColor_txt"
+            android:textSize="@dimen/txt_normal"/>
+        <ImageView
+            android:id="@+id/show"
+            android:layout_width="25dp"
+            android:layout_height="25dp"
+            android:src="@drawable/icon_right_gray"
+            android:layout_centerVertical="true"
+            android:layout_alignParentRight="true"
+            android:layout_margin="10dp"/>
+
+        <View
+            android:id="@+id/divider_1"
+            android:layout_width="match_parent"
+            android:layout_height="@dimen/divider"
+            android:layout_below="@+id/logo"
+            android:layout_toRightOf="@+id/logo"
+            android:layout_marginBottom="1dp"
+            android:background="@color/divider"/>
+
+    </RelativeLayout>
+
+
+
+</LinearLayout>

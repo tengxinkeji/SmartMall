@@ -1,0 +1,58 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:background="@color/white">
+        <cn.lanmei.com.smartmall.myui.MyInputEdit
+            xmlns:wh="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/txt_info_location"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            wh:txttag="您  所  在  的  城  市"
+            wh:input_hint="广东广州"></cn.lanmei.com.smartmall.myui.MyInputEdit>
+            <ImageView
+                android:id="@+id/img_location"
+                android:layout_width="wrap_content"
+                android:layout_height="match_parent"
+                android:src="@mipmap/icon_location"
+                android:layout_marginRight="30dp"/>
+    </LinearLayout>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+    <cn.lanmei.com.smartmall.myui.MyInputEdit
+        xmlns:wh="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/txt_info_count"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wh:txttag="您的家庭人数  ( 人 )"
+        wh:input_hint=""
+        wh:input_type="num"></cn.lanmei.com.smartmall.myui.MyInputEdit>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"/>
+
+    <cn.lanmei.com.smartmall.myui.MyInputEdit
+        xmlns:wh="http://schemas.android.com/apk/res-auto"
+        android:id="@+id/txt_info_incomming"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        wh:txttag="您的家庭收入(k/年)"
+        wh:input_hint=""
+        wh:input_type="num"></cn.lanmei.com.smartmall.myui.MyInputEdit>
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="@dimen/divider"
+        android:background="@color/divider"
+        android:layout_marginBottom="10dp"/>
+</LinearLayout>

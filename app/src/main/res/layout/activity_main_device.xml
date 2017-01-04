@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <View
+        android:layout_height="@dimen/divider"
+        android:layout_width="match_parent"
+        android:id="@+id/view"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/layout_menu"
+        android:background="@color/divider"/>
+    <include layout="@layout/layout_menu_device"/>
+    <FrameLayout
+        android:layout_height="match_parent"
+        android:layout_width="match_parent"
+        android:id="@+id/layout_frame_main"
+        android:layout_alignParentLeft="true"
+        android:layout_above="@+id/view"
+        android:background="@mipmap/bg_device"
+        android:layout_alignParentTop="true">
+    </FrameLayout>
+
+</RelativeLayout>
