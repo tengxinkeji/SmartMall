@@ -189,7 +189,7 @@ public class EaseChatFragment extends EaseBaseFragment implements EMMessageListe
             if(EaseUserUtils.getUserInfo(toChatUsername) != null){
                 EaseUser user = EaseUserUtils.getUserInfo(toChatUsername);
                 if (user != null) {
-                    titleBar.setTitle(TextUtils.isEmpty(toName)||toName.equals("null")?toChatUsername:toName);
+                    titleBar.setTitle(TextUtils.isEmpty(toName)||toName.equals("null")?user.getNick():toChatUsername);
 //                    titleBar.setTitle(user.getNick());
                 }
             }

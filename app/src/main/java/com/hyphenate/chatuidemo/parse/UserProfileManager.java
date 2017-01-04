@@ -2,6 +2,8 @@ package com.hyphenate.chatuidemo.parse;
 
 import android.content.Context;
 
+import com.common.app.Common;
+import com.common.app.SharePreferenceUtil;
 import com.hyphenate.EMValueCallBack;
 import com.hyphenate.chat.EMClient;
 import com.hyphenate.chatuidemo.DemoHelper;
@@ -118,8 +120,10 @@ public class UserProfileManager {
 			String username = EMClient.getInstance().getCurrentUser();
 			currentUser = new EaseUser(username);
 			String nick = getCurrentUserNick();
+			nick= SharePreferenceUtil.getString(Common.User_name,nick);
 			currentUser.setNick((nick != null) ? nick : username);
-			currentUser.setAvatar(getCurrentUserAvatar());
+			String pic = SharePreferenceUtil.getString(Common.User_pic,getCurrentUserAvatar());
+			currentUser.setAvatar(pic);
 		}
 		return currentUser;
 	}

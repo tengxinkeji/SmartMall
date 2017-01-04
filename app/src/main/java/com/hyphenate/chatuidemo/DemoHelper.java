@@ -7,6 +7,7 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
+import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -733,20 +734,23 @@ public class DemoHelper {
                 EaseCommonUtils.setUserInitialLetter(user);
             }
         }
-        FutureTask<Bundle> future = new FutureTask<Bundle>(new MyCallable(username));
-        new Thread(future).start();
-        try {
-            Bundle data = future.get();
-            if (data!=null){
-                user.setNickname(data.getString("nickname"));
-                user.setNick(data.getString("nickname"));
-                user.setAvatar(data.getString("pic"));
+        if (!TextUtils.isEmpty(user.getNick())||user.getNick().equals(username)){
+            FutureTask<Bundle> future = new FutureTask<Bundle>(new MyCallable(username));
+            new Thread(future).start();
+            try {
+                Bundle data = future.get();
+                if (data!=null){
+                    user.setNickname(data.getString("nickname"));
+                    user.setNick(data.getString("nickname"));
+                    user.setAvatar(data.getString("pic"));
+                }
+            } catch (InterruptedException e) {
+                e.printStackTrace();
+            } catch (ExecutionException e) {
+                e.printStackTrace();
             }
-        } catch (InterruptedException e) {
-            e.printStackTrace();
-        } catch (ExecutionException e) {
-            e.printStackTrace();
         }
+
         return user;
 	}
 
