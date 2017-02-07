@@ -309,15 +309,9 @@ public class MainActionActivity extends BaseMainActionActivity implements View.O
 
                 break;
             case 4://
-
-                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
-                    Intent toLogin=new Intent(this,LoginActionActivity.class);
-                    startActivity(toLogin);
-                    break;
-                }
                 setMenuUI(4);
                 setHeadCentertText(menuStr[4]);
-                layoutHead.setVisibility(View.VISIBLE);
+                layoutHead.setVisibility(View.GONE);
                 viewRingBar.setVisibility(View.GONE);
                 F_my f_my=(F_my)fm.findFragmentByTag("F_my");
                 if (f_my==null){

@@ -45,7 +45,9 @@ import java.util.List;
 
 import cn.lanmei.com.smartmall.R;
 import cn.lanmei.com.smartmall.adapter.MenusAdapter;
+import cn.lanmei.com.smartmall.device.Activity_dev;
 import cn.lanmei.com.smartmall.goods.Activity_manager_address;
+import cn.lanmei.com.smartmall.login.LoginActionActivity;
 import cn.lanmei.com.smartmall.main.BaseActionActivity;
 import cn.lanmei.com.smartmall.main.BaseMainActionActivity;
 import cn.lanmei.com.smartmall.model.MenuModel;
@@ -112,6 +114,14 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
         menus.add(typeModel);
 
         typeModel=new MenuModel();
+        typeModel.setId(11);
+        typeModel.setDividerShow(true);
+        typeModel.setDividerLarge(false);
+        typeModel.setTitle(res.getString(R.string.my_dev));
+        typeModel.setDrawable(R.drawable.icon_my_dev);
+        menus.add(typeModel);
+
+        typeModel=new MenuModel();
         typeModel.setId(2);
         typeModel.setDividerShow(true);
         typeModel.setDividerLarge(false);
@@ -121,7 +131,6 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
 
         typeModel=new MenuModel();
         typeModel.setId(3);
-        typeModel.setShowTop(true);
         typeModel.setDividerShow(true);
         typeModel.setDividerLarge(false);
         typeModel.setTitle(res.getString(R.string.my_psw_modify));
@@ -165,6 +174,8 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
         typeModel.setTitle(res.getString(R.string.my_team));
         typeModel.setDrawable(R.drawable.index_30);
         menus.add(typeModel);
+
+
 
         typeModel=new MenuModel();
         typeModel.setId(8);
@@ -263,13 +274,7 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
             }
         });
 //
-        headImg=SharePreferenceUtil.getString(Common.User_pic,"");
-        refreshImg(headImg);
 
-        name= SharePreferenceUtil.getString(Common.User_name,"");
-        if (!TextUtils.isEmpty(name)){
-            txtName.setText(name);
-        }
 
     }
 
@@ -287,34 +292,70 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
     }
     private void setItemClick(int position){
 
+
         switch (position){
 
             case -1:
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 loadImg();
                 break;
             case 1://我的资料
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent toInfo=new Intent(getActivity(), Activity_info.class);
                 getActivity().startActivity(toInfo);
                 break;
             case 2://我的订单
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent toOrder=new Intent(getActivity(), Activity_list_order.class);
                 getActivity().startActivity(toOrder);
                 break;
             case 3://密码修改
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent toMPsw=new Intent(getActivity(), Activity_modify_psw.class);
                 getActivity().startActivity(toMPsw);
                 break;
             case 4://我的账户
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent touser=new Intent(getActivity(), Activity_user_money.class);
 //                Intent touser=new Intent(getActivity(), SampleActivity.class);
                 getActivity().startActivity(touser);
                 break;
             case 5://收货地址
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent toAddr=new Intent(getActivity(), Activity_manager_address.class);
                 getActivity().startActivity(toAddr);
 
                 break;
             case 6://我的推广
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                /* String url=NetData.HOST+NetData.ACTION_qrcode+"&act=1&uid="+ MyApplication.getInstance().getUid();
                 DF_ewm dfEwm=new DF_ewm(url,headImg,false);
                 dfEwm.show(getChildFragmentManager(),"DF_ewm");*/
@@ -322,15 +363,29 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
                 getActivity().startActivity(toPop);
                 break;
             case 7://我的团队
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent tosalesteam=new Intent(getActivity(), Activity_salesteam.class);
                 getActivity().startActivity(tosalesteam);
                 break;
             case 8://我的收藏
-
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent toColect=new Intent(getActivity(), Activity_list_collect.class);
                 getActivity().startActivity(toColect);
                 break;
             case 9://投诉专区
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
                 Intent intent = new Intent(getActivity(), ChatActivity.class);
                 // it's single chat
                 intent.putExtra(Constant.EXTRA_USER_name, "客服"+MyApplication.hxServer);
@@ -344,9 +399,13 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
 
                 break;
 
-            case 11://我的收藏
-
-
+            case 11://我的设备
+                if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                    Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                    startActivity(toLogin);
+                    break;
+                }
+                getActivity().startActivity(new Intent(getActivity(), Activity_dev.class));
                 break;
             case 12://
 
@@ -366,6 +425,11 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
 
     /**刷新*/
     public void refresh() {
+        if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+            txtName.setText("游客");
+            imgHead.setImageResource(R.drawable.img_logo);
+            return;
+        }
         RequestParams requestParams = new RequestParams(NetData.ACTION_Member_index);
         requestParams.addParam("uid",MyApplication.getInstance().getUid());
         requestParams.setBaseParser(new ParserJson());

@@ -448,11 +448,11 @@
         "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\exploded-aar\\SmartMall\\easeui\\unspecified\\res\\drawable-hdpi-v4\\ee_32.png"
     },
     {
-        "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ee_13.png",
-        "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\exploded-aar\\SmartMall\\easeui\\unspecified\\res\\drawable-hdpi-v4\\ee_13.png"
-    },
-    {
         "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_show_head_toast_bg.9.png",
         "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\exploded-aar\\SmartMall\\easeui\\unspecified\\res\\drawable-hdpi-v4\\ease_show_head_toast_bg.9.png"
+    },
+    {
+        "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ee_13.png",
+        "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\exploded-aar\\SmartMall\\easeui\\unspecified\\res\\drawable-hdpi-v4\\ee_13.png"
     }
 ]

@@ -28,12 +28,12 @@
         "source": "F:\\android\\studioWork\\SmartMall\\easeui\\res\\anim\\voice_from_icon.xml"
     },
     {
-        "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\hold.xml",
-        "source": "F:\\android\\studioWork\\SmartMall\\easeui\\res\\anim\\hold.xml"
-    },
-    {
         "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_right.xml",
         "source": "F:\\android\\studioWork\\SmartMall\\easeui\\res\\anim\\slide_out_to_right.xml"
+    },
+    {
+        "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\hold.xml",
+        "source": "F:\\android\\studioWork\\SmartMall\\easeui\\res\\anim\\hold.xml"
     },
     {
         "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\release\\anim\\slide_out_to_left.xml",

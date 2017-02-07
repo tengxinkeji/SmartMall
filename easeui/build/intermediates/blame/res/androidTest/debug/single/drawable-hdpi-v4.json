@@ -432,12 +432,12 @@
         "source": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_record_animate_08.png"
     },
     {
-        "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_conversation_selected.png",
-        "source": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_conversation_selected.png"
-    },
-    {
         "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_record_animate_05.png",
         "source": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_record_animate_05.png"
+    },
+    {
+        "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ease_conversation_selected.png",
+        "source": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\bundles\\debug\\res\\drawable-hdpi-v4\\ease_conversation_selected.png"
     },
     {
         "merged": "F:\\android\\studioWork\\SmartMall\\easeui\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-hdpi-v4\\ee_18.png",

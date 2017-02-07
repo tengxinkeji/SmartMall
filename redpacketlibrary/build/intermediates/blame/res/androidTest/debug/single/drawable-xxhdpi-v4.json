@@ -100,12 +100,12 @@
         "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_question_white.png"
     },
     {
-        "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_group_everyone.png",
-        "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_group_everyone.png"
-    },
-    {
         "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_question_black.png",
         "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_question_black.png"
+    },
+    {
+        "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\rp_group_everyone.png",
+        "source": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\bundles\\debug\\res\\drawable-xxhdpi-v4\\rp_group_everyone.png"
     },
     {
         "merged": "F:\\android\\studioWork\\SmartMall\\redpacketlibrary\\build\\intermediates\\res\\merged\\androidTest\\debug\\drawable-xxhdpi-v4\\em_red_packet_icon.png",
