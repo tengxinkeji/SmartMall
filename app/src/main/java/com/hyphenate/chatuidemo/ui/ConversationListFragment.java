@@ -146,7 +146,7 @@ public class ConversationListFragment extends EaseConversationListFragment{
         refresh();
 
         // update unread count
-        ((MainActivity) getActivity()).updateUnreadLabel();
+//        ((MainActionActivity) getActivity()).updateUnreadLabel();
         return true;
     }
 

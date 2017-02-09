@@ -18,7 +18,7 @@ private static String TAG="URLRequest";
 
 	// Get方式请求
 	public static String requestByGet(String urlStr)  {
-		L.MyLog("url:", urlStr);
+
 
 		try {
 			// 新建一个URL对象
@@ -36,7 +36,8 @@ private static String TAG="URLRequest";
 			// 开始连接
 			urlConn.connect();
 			// 判断请求是否成功
-			L.MyLog(TAG,"ResponseCode:"+urlConn.getResponseCode()+"");
+
+			L.MyLog(TAG,"ResponseCode:"+urlConn.getResponseCode()+"："+urlStr);
 			if (urlConn.getResponseCode() == HttpURLConnection.HTTP_OK) {
 				// 获取返回的数据
 				return convertStreamToString(urlConn.getInputStream()).toString();
@@ -54,7 +55,7 @@ private static String TAG="URLRequest";
 	
 	// Get方式请求  
 	public static Object requestByGet(RequestParams requestParams )  {
-		L.MyLog("url:", requestParams.getRequestUrl());
+
 		try {
 			// 新建一个URL对象
 			URL url = new URL(requestParams.getRequestUrl());
@@ -71,7 +72,7 @@ private static String TAG="URLRequest";
 			// 开始连接
 			urlConn.connect();
 			// 判断请求是否成功
-			L.MyLog(TAG,"ResponseCode:"+urlConn.getResponseCode()+"");
+			L.MyLog(TAG,"ResponseCode:"+urlConn.getResponseCode()+"："+requestParams.getRequestUrl());
 			if (urlConn.getResponseCode() == HttpURLConnection.HTTP_OK) {
 				// 获取返回的数据
 				String data = convertStreamToString(urlConn.getInputStream()).toString();

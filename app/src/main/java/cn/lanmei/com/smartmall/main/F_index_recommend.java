@@ -199,7 +199,7 @@ F_index_recommend extends BaseScrollFragment {
 
     @Override
     public void requestServerData() {
-        requestHxServer();
+
         requestAd();
         requestAd_re();
         requestCategory();
@@ -383,34 +383,7 @@ F_index_recommend extends BaseScrollFragment {
 
     }
 
-    public void requestHxServer() {
-        RequestParams requestParams = new RequestParams(NetData.ACTION_custome_service);
-        requestParams.setBaseParser(new ParserJson());
-        getDataFromServer(requestParams, new DataCallBack<JSONObject>() {
-            @Override
-            public void onPre() {
 
-            }
-
-            @Override
-            public void processData(JSONObject parserData) {
-                try {
-                    if (parserData!=null&&parserData.getInt("status")==1){
-                        MyApplication.hxServer=parserData.getJSONObject("data").getString("hx_user");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-
-    }
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {

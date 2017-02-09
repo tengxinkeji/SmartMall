@@ -8,11 +8,12 @@ public class NetData {
     public static final String KEY_Value="akey";
     public static final String KEY_key="appkey";
 
-    public static final String HOST_IP="120.25.205.197";
+//    public static final String HOST_IP="120.25.205.197";
+    public static final String HOST_IP="api.itlanmei.cn";
 
     public static final String HOST="http://" +HOST_IP+"/";
 
-    public static final String PATH="App/";
+    public static final String PATH="";
     public static final int LIMIT=20;
 
     /**广告图*/
@@ -109,7 +110,7 @@ public class NetData {
     public static final String ACTION_Shop_goods_details="Shop/goods_details?";
 
     /**商品分类更新*/
-    public static final String ACTION_category_isupdate="Index/data_update?";
+    public static final String ACTION_category_isupdate="Public/update?";
 
     /**商品分类*/
     public static final String ACTION_Shop_category="Shop/category?";

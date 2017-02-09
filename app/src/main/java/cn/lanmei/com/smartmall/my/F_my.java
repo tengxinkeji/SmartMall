@@ -29,8 +29,6 @@ import com.common.net.ParserJsonManager;
 import com.common.net.RequestParams;
 import com.common.popup.SelectPicPopupWindow;
 import com.common.tools.PhotoSelectActivityResult;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.ui.ChatActivity;
 import com.nostra13.universalimageloader.core.DisplayImageOptions;
 import com.nostra13.universalimageloader.core.listener.SimpleImageLoadingListener;
 import com.oss.ManageOssUpload;
@@ -49,6 +47,7 @@ import cn.lanmei.com.smartmall.device.Activity_dev;
 import cn.lanmei.com.smartmall.goods.Activity_manager_address;
 import cn.lanmei.com.smartmall.login.LoginActionActivity;
 import cn.lanmei.com.smartmall.main.BaseActionActivity;
+import cn.lanmei.com.smartmall.main.BaseActivity;
 import cn.lanmei.com.smartmall.main.BaseMainActionActivity;
 import cn.lanmei.com.smartmall.model.MenuModel;
 import cn.lanmei.com.smartmall.myuser.Activity_user_money;
@@ -386,11 +385,7 @@ public class F_my extends BaseScrollFragment implements PhotoSelectActivityResul
                     startActivity(toLogin);
                     break;
                 }
-                Intent intent = new Intent(getActivity(), ChatActivity.class);
-                // it's single chat
-                intent.putExtra(Constant.EXTRA_USER_name, "客服"+MyApplication.hxServer);
-                intent.putExtra(Constant.EXTRA_USER_ID, MyApplication.hxServer);
-                startActivity(intent);
+                ((BaseActivity)getActivity()).toHxServer(1);
 
                 break;
             case 10://设置

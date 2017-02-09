@@ -176,7 +176,7 @@ F_index extends BaseScrollFragment {
 
     @Override
     public void requestServerData() {
-        requestHxServer();
+
         requestAd();
         requestAd_re();
         requestCategory();
@@ -223,8 +223,8 @@ F_index extends BaseScrollFragment {
                 if (parserData!=null){
                     try {
                         if (parserData.getInt("status")==1){
-                            JSONObject data = parserData.optJSONArray("data").getJSONObject(0);
-                            long time = data.getLong("time")/1000;
+                            JSONObject data = parserData.optJSONObject("data");
+                            long time = data.getLong("timestamp")*1000;
                             long upTime = SharePreferenceUtil.getLong(Common.KEY_category_uptime, 0l);
                             if (upTime<time){
                                 updateCategory();
@@ -356,34 +356,7 @@ F_index extends BaseScrollFragment {
 
     }
 
-    public void requestHxServer() {
-        RequestParams requestParams = new RequestParams(NetData.ACTION_custome_service);
-        requestParams.setBaseParser(new ParserJson());
-        getDataFromServer(requestParams, new DataCallBack<JSONObject>() {
-            @Override
-            public void onPre() {
 
-            }
-
-            @Override
-            public void processData(JSONObject parserData) {
-                try {
-                    if (parserData!=null&&parserData.getInt("status")==1){
-                        MyApplication.hxServer=parserData.getJSONObject("data").getString("hx_user");
-                    }
-                } catch (JSONException e) {
-                    e.printStackTrace();
-                }
-
-            }
-
-            @Override
-            public void onComplete() {
-
-            }
-        });
-
-    }
 
     @Override
     public void onPullDownToRefresh(PullToRefreshBase<ScrollView> refreshView) {
@@ -438,9 +411,19 @@ F_index extends BaseScrollFragment {
                     getActivity().startActivity(toSales);
                     break;
                 case R.id.index_repair:
+                    if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                        Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                        startActivity(toLogin);
+                        break;
+                    }
                     getActivity().startActivity(new Intent(getActivity(), Activity_repair.class));
                     break;
                 case R.id.index_dev:
+                    if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+                        Intent toLogin=new Intent(getActivity(),LoginActionActivity.class);
+                        startActivity(toLogin);
+                        break;
+                    }
                     getActivity().startActivity(new Intent(getActivity(), Activity_dev.class));
                     break;
 

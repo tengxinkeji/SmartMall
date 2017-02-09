@@ -387,8 +387,7 @@ public class MainActionActivity extends BaseMainActionActivity implements View.O
         txtMenu.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-               MainActionActivity.this.startActivity(
-                       new Intent(MainActionActivity.this, Activity_topic_send.class));
+                toTopic();
             }
         });
 //        viewRingBar.setVisibility(View.GONE);
@@ -396,6 +395,15 @@ public class MainActionActivity extends BaseMainActionActivity implements View.O
         frameLayoutBar.addView(viewRingBar);
     }
 
+    private void toTopic(){
+        if (!SharePreferenceUtil.getBoolean(Common.KEY_is_login, false)){
+            Intent toLogin=new Intent(MainActionActivity.this,LoginActionActivity.class);
+            startActivity(toLogin);
+            return;
+        }
+        MainActionActivity.this.startActivity(
+                new Intent(MainActionActivity.this, Activity_topic_send.class));
+    }
 
     private void addFragmentShow(Fragment f, String tag){
 

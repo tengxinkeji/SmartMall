@@ -204,7 +204,8 @@ public class RequestMessage {
 
         // 异步调用HTTPDNS解析IP，如果还没解析到结果，也是返回null
         if (urlHost == null) {
-            urlHost = originHost;
+//            urlHost = originHost;
+            urlHost = "images.itlanmei.cn";
         }
 
         String headerHost = originHost;

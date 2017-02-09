@@ -7,7 +7,6 @@ import android.content.Intent;
 import android.content.IntentFilter;
 import android.os.Bundle;
 import android.support.v4.content.LocalBroadcastManager;
-import android.text.TextUtils;
 import android.util.Log;
 import android.widget.Toast;
 
@@ -716,9 +715,11 @@ public class DemoHelper {
         appContext.startActivity(intent);
     }
  
-	private EaseUser getUserInfo(String username){
-		// To get instance of EaseUser, here we get it from the user list in memory
-		// You'd better cache it if you get it from your server
+
+
+    private EaseUser getUserInfo(String username){
+        // To get instance of EaseUser, here we get it from the user list in memory
+        // You'd better cache it if you get it from your server
         EaseUser user = null;
         if(username.equals(EMClient.getInstance().getCurrentUser())){
             user=getUserProfileManager().getCurrentUserInfo();
@@ -734,25 +735,22 @@ public class DemoHelper {
                 EaseCommonUtils.setUserInitialLetter(user);
             }
         }
-        if (!TextUtils.isEmpty(user.getNick())||user.getNick().equals(username)){
-            FutureTask<Bundle> future = new FutureTask<Bundle>(new MyCallable(username));
-            new Thread(future).start();
-            try {
-                Bundle data = future.get();
-                if (data!=null){
-                    user.setNickname(data.getString("nickname"));
-                    user.setNick(data.getString("nickname"));
-                    user.setAvatar(data.getString("pic"));
-                }
-            } catch (InterruptedException e) {
-                e.printStackTrace();
-            } catch (ExecutionException e) {
-                e.printStackTrace();
+        FutureTask<Bundle> future = new FutureTask<Bundle>(new MyCallable(username));
+        new Thread(future).start();
+        try {
+            Bundle data = future.get();
+            if (data!=null){
+                user.setNickname(data.getString("nickname"));
+                user.setNick(data.getString("nickname"));
+                user.setAvatar(data.getString("pic"));
             }
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
         }
-
         return user;
-	}
+    }
 
     class MyCallable implements Callable {
         private String oid;
@@ -762,21 +760,41 @@ public class DemoHelper {
         }
 
         public Bundle call() throws Exception {
-            RequestParams requestParams = new RequestParams(NetData.ACTION_Member_index);
-            requestParams.addParam("uid", MyApplication.getInstance().getUid());
-            requestParams.setBaseParser(new ParserJson());
-            JSONObject jsonObject= (JSONObject) URLRequest.requestByGet(requestParams);
-            Bundle data=null;
-            if (jsonObject!=null&&jsonObject.getInt("status")==1){
-                jsonObject=jsonObject.optJSONObject("data");
-                data=new Bundle();
-                data.putString("nickname",jsonObject.getString("nickname"));
-                data.putString("pic",jsonObject.getString("pic"));
+            Bundle data=new Bundle();
+            if (oid.startsWith("w_")){
+                RequestParams requestParams = new RequestParams(NetData.ACTION_Member_index);
+                requestParams.addParam("uid", oid.substring(2));
+                requestParams.setBaseParser(new ParserJson());
+                JSONObject jsonObject= (JSONObject) URLRequest.requestByGet(requestParams);
+
+                if (jsonObject!=null&&jsonObject.getInt("status")==1){
+                    jsonObject=jsonObject.optJSONObject("data");
+
+                    data.putString("nickname",jsonObject.getString("nickname"));
+                    data.putString("pic",jsonObject.getString("pic"));
+                }
+            }else {
+                data.putString("nickname", MyApplication.getInstance().hxServerNick);
+                data.putString("pic","drawable://" +MyApplication.getInstance().getPlaceholder());
+//                if (MyApplication.hxServer!=null&&MyApplication.hxServer.getUid().equals(oid)){
+//                    data.putString("nickname",MyApplication.hxServer.getNickName());
+//                    data.putString("pic",MyApplication.hxServer.getPicUrl());
+//                }else if (MyApplication.hxStoreServer!=null&&MyApplication.hxStoreServer.getUid().equals(oid)){
+//                    data.putString("nickname",MyApplication.hxStoreServer.getNickName());
+//                    data.putString("pic",MyApplication.hxStoreServer.getPicUrl());
+//                }else{
+//                    data.putString("nickname",oid);
+//                    data.putString("pic","");
+//                }
+
             }
+
 
             return data;
         }
     }
+
+
 	
 	 /**
      * Global listener

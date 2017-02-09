@@ -145,7 +145,7 @@ public class LoginActivity extends BaseActivity {
 
 			    // update current user's display name for APNs
 				boolean updatenick = EMClient.getInstance().updateCurrentUserNick(
-						MyApplication.currentUserNick.trim());
+						MyApplication.hxServerNick.trim());
 				if (!updatenick) {
 					Log.e("LoginActivity", "update current user nick fail");
 				}

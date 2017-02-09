@@ -55,8 +55,9 @@ public class MyApplication extends MultiDexApplication {
 	/**
 	 * nickname for current user, the nickname instead of ID be shown when user receive notification from APNs
 	 */
-	public static String currentUserNick = "";
-	public static String hxServer = "";
+//	public static String currentUserNick = "";
+//	public static String hxServer = "";
+	public static String hxServerNick="客服";
 
 	public static final boolean DEVELOPER_MODE = true;
 

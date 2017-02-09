@@ -27,6 +27,9 @@ import com.common.app.OnFragmentInteractionListener;
 import com.common.app.SharePreferenceUtil;
 import com.common.app.degexce.L;
 import com.common.datadb.DBGoodsCartManager;
+import com.common.net.NetData;
+import com.common.net.RequestParams;
+import com.common.net.URLRequest;
 import com.easemob.redpacketsdk.constant.RPConstant;
 import com.easemob.redpacketui.utils.RedPacketUtil;
 import com.hyphenate.EMCallBack;
@@ -55,12 +58,17 @@ import com.umeng.analytics.MobclickAgent;
 import com.umeng.update.UmengUpdateAgent;
 
 import java.util.List;
+import java.util.concurrent.Callable;
+import java.util.concurrent.ExecutionException;
+import java.util.concurrent.FutureTask;
 
 import cn.lanmei.com.smartmall.R;
 import cn.lanmei.com.smartmall.device.Activity_device_err;
 import cn.lanmei.com.smartmall.goods.ActivityGoodsDetail;
 import cn.lanmei.com.smartmall.goods.ActivityGoodsDetail_2;
 import cn.lanmei.com.smartmall.goods.ActivityShoppingMall;
+import cn.lanmei.com.smartmall.model.M_ServerHxUser;
+import cn.lanmei.com.smartmall.parse.ParserHXserver;
 
 /**
  * Created by Administrator on 2016/7/25.
@@ -618,5 +626,37 @@ public abstract class BaseActivity extends FragmentActivity implements OnFragmen
                 chatroomUnreadMsgCount=chatroomUnreadMsgCount+conversation.getUnreadMsgCount();
         }
         return unreadMsgCountTotal-chatroomUnreadMsgCount;
+    }
+
+    /**
+     * @param caseType 1---客服
+     * */
+    public void toHxServer(final int caseType){
+        Callable<M_ServerHxUser> callable=new Callable<M_ServerHxUser>() {
+            @Override
+            public M_ServerHxUser call() throws Exception {
+                RequestParams requestParams = new RequestParams(NetData.ACTION_custome_service);
+                if (caseType!=1){
+                    requestParams.addParam("type",caseType);
+                }
+                requestParams.setBaseParser(new ParserHXserver());
+                M_ServerHxUser mHxserver = (M_ServerHxUser) URLRequest.requestByGet(requestParams);
+                return mHxserver;
+            }
+        };
+        FutureTask<M_ServerHxUser> futureTask=new FutureTask<M_ServerHxUser>(callable);
+        new Thread(futureTask).start();
+        try {
+            M_ServerHxUser mHxserver=futureTask.get();
+            Intent intent = new Intent(this, ChatActivity.class);
+            // it's single chat
+            intent.putExtra(Constant.EXTRA_USER_name, mHxserver.getNickName());
+            intent.putExtra(Constant.EXTRA_USER_ID, mHxserver.getUid());
+            startActivity(intent);
+        } catch (InterruptedException e) {
+            e.printStackTrace();
+        } catch (ExecutionException e) {
+            e.printStackTrace();
+        }
     }
 }

@@ -14,14 +14,12 @@ import android.widget.LinearLayout;
 import android.widget.TextView;
 
 import com.common.app.Common;
-import com.common.app.MyApplication;
 import com.common.app.SharePreferenceUtil;
 import com.common.app.degexce.L;
-import com.hyphenate.chatuidemo.Constant;
-import com.hyphenate.chatuidemo.ui.ChatActivity;
 
 import cn.lanmei.com.smartmall.R;
 import cn.lanmei.com.smartmall.login.LoginActionActivity;
+import cn.lanmei.com.smartmall.main.BaseActivity;
 import cn.lanmei.com.smartmall.shop.Activity_shop;
 
 
@@ -130,12 +128,13 @@ public class F_goods_details_menu extends Fragment {
                         startActivity(toLogin);
                         break;
                     }
-                    Intent intent = new Intent(getActivity(), ChatActivity.class);
-                    // it's single chat
-                    Bundle data=new Bundle();
-                    intent.putExtra(Constant.EXTRA_USER_name, F_goods_detail_2.mGoods.getGoodsStoreName());
-                    intent.putExtra(Constant.EXTRA_USER_ID, MyApplication.hxServer);
-                    startActivity(intent);
+//                    Intent intent = new Intent(getActivity(), ChatActivity.class);
+//                    // it's single chat
+//                    Bundle data=new Bundle();
+//                    intent.putExtra(Constant.EXTRA_USER_name, F_goods_detail_2.mGoods.getGoodsStoreName());
+//                    intent.putExtra(Constant.EXTRA_USER_ID, MyApplication.hxServer);
+//                    startActivity(intent);
+                    ((BaseActivity)getActivity()).toHxServer(1);
                     break;
                 case R.id.menu_goods_add_cart:
                     L.MyLog(TAG,"menu_goods_add_cart");
